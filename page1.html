@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAE/1</title>
+    <!--CSS page link for styling-->
+    <link rel="stylesheet" href="style1.css">
+    <!-- Include Plotly.js library math.js library to deliver functionality -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.5.1/math.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!--JS page link for implementing functionality-->
+    <script src="logic.js"></script>  
+</head>
+<body>
+    <!--Making navbar...again -->
+    <header>
+        <div class="navbar">
+            <div class="navlogo border scrollText">
+                <div class="logo"></div>
+             </div>
+            <div class="scrollText">Technical Analysis of Expenditure</div> 
+            <div class="navlogo border scrollText">
+                <div class="logo"></div>
+            </div>
+        </div>
+    </header>
+    <!--The section which takes input and produces output-->
+    <div class="Res">
+        <div class="container"> 
+            <header class="head2"> 
+                <div><h1 class="border">Visualization and Analysis</h1> </div></header> 
+                <div class="input-container"> 
+                    <input type="number" id="Income" placeholder="Enter income">
+                    <input type="number" id="Food" placeholder="Enter amount spent on Food">
+                    <input type="number" id="Travel" placeholder="Enter amount spent on Travel"> 
+                    <input type="number" id="PersonalCare" placeholder="Enter amount spent on Personal Care">
+                    <input type="number" id="Skill" placeholder="Enter amount spent on skill development or education">
+                    <input type="number" id="Others" placeholder="Enter amount spent on other categories">
+                </div> 
+                <!--Visual output for analysis-->
+                <button onclick="plotGraph()"> 
+                    Plot 
+                </button>        
+            <div class="main-content"> 
+                <div class="graph" id="graph"></div> 
+            </div> 
+            <!--Textual output for analysis-->
+            <button onclick="Analyse()"> 
+                Analyse 
+            </button> 
+            <div class="cont" id="percentage-output"></div>
+            <div class="cont" id="total-output"></div>
+            <div class="cont" id="total-save"></div>
+
+        </div>
+    </div>
+    <footer>
+        <div class="footer1 border">
+            TAE | developed by MVS243 | Dev21Sprint'24 | Technical Analysis of Expenditure
+        </div>
+    </footer>    
+</body>
+</html>
